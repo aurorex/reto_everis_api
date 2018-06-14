@@ -6,7 +6,7 @@ $dbname = getenv("databasename");
 $dbuser = getenv("databaseuser");
 $dbpwd = getenv("databasepassword");
 
-$link = "mysql:host='$dbhost';dbname='$dbname'";
+$link = "mysql:host=$dbhost;dbname=$dbname";
 $usuario = 'root';
 $pass = '';
 
