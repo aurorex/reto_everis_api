@@ -1,0 +1,7 @@
+# archivo de configuración del servidor
+Options +FollowSymLinks
+RewriteEngine On
+#RewriteRule ExpresionRegular UrlDestino [banderas]
+
+# RewriteRule ^([a-zA-Z0-9]*)$ data.php?variable=$1
+RewriteRule ^([a-zA-Z0-9]*)$ data.php?moneda=$1
