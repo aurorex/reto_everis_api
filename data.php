@@ -10,7 +10,7 @@ echo json_encode($peticion);*/
 // el formato de este archvo va aser en formato json:
 header('Content-Type: application/json');
 // cualquier persona puede acceder a consumir nuestra api:
-header('Access-Control-Allow-Origin: *')
+header('Access-Control-Allow-Origin: *');
 
 if($_GET['moneda']=='euro' || $_GET['moneda']== 'dolar'){
   // echo 'usted colocó euro';
