@@ -12,14 +12,14 @@ header('Content-Type: application/json');
 // cualquier persona puede acceder a consumir nuestra api:
 header('Access-Control-Allow-Origin: *');
 
-if($_GET['moneda']=='euro' || $_GET['moneda']== 'dolar'){
+if($_GET['var']=='usuario' || $_GET['var']== 'proyecto'){
   // echo 'usted colocó euro';
   include_once 'conexion.php';
-  $sql = 'SELECT * FROM '.$_GET['moneda'];
+  $sql = 'SELECT * FROM '.$_GET['var'];
   $sentencia = $pdo->prepare($sql);
   $sentencia->execute();
-  $data = $sentencia->fetchAll();
-  // var_dump($sql);
+  $data = $sentencia->fetchAll(PDO::FETCH_ASSOC);
+  var_dump($data);
 }else{
   echo 'solicitud no encontrada';
 }
