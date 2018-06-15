@@ -19,7 +19,7 @@ if($_GET['var']=='usuario' || $_GET['var']== 'proyecto'){
   $sentencia = $pdo->prepare($sql);
   $sentencia->execute();
   $data = $sentencia->fetchAll(PDO::FETCH_ASSOC);
-  var_dump($data);
+  // var_dump($data);
 }else{
   echo 'solicitud no encontrada';
 }
